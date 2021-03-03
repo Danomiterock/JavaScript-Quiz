@@ -1,13 +1,29 @@
-startButton = document.querySelector(".btn")
-countDownTimer = document.querySelector(".timer")
+startButton = document.querySelector("#startbtn")
+countDownTimer = document.querySelector("#timer")
+var seconds = 60
 
-//Listen for click
-document.eventListener("click", startQuiz()) {
+
+startButton.addEventListener("click", function(e)) {
+    //possible clock solution from Brad
+    startButton.style.display = "none";
+  clock.textContent = seconds;
+  var clockMsg = setInterval(function () {
+    time--;
+    clock.textContent = time;
+    if (time === 0) {
+      clearInterval(clockMsg);
+    }
+  }, 1000);
+  7:24
+clock.textContent = time;
+    if (time === 0) {
+      clearInterval(clockMsg);(stops the clock at zero.
 
 }
 
 //Time calculations in seconds
-var seconds = Math.floor((distance % (1000 * 120)) / 1000);
+// var seconds = Math.floor((distance % (1000 * 120)) / 1000);
+
 var question1 = {
 
 }
