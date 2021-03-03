@@ -1,14 +1,12 @@
 startButton = document.querySelector("#startbtn")
 countDownTimer = document.querySelector("#timer")
+
 var seconds = 60
-
-startButton.addEventListener("click", function(e)) {
-    countDownTimer.display.seconds
-}
-
-//Time calculations in seconds
-// var seconds = Math.floor((distance % (1000 * 120)) / 1000);
-
+var score = 0
+//identify JavaScript questions and create two boooleian and two multiple choice questions
+//add prompt or confirm for each question
+//store answers to multiple choice in an array and create coresponding vaues displayed as buttons
+//asign a value of 25 points per question
 var question1 = {
 
 }
@@ -23,6 +21,15 @@ var question3 = {
 var question4 = {
 
 }
+
+
+startButton.addEventListener("click", function(e)) {
+    countDownTimer.display.seconds
+}
+
+//Time calculations in seconds
+// var seconds = Math.floor((distance % (1000 * 120)) / 1000);
+
 
 
 function startQuiz(){
