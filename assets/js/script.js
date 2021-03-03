@@ -2,23 +2,8 @@ startButton = document.querySelector("#startbtn")
 countDownTimer = document.querySelector("#timer")
 var seconds = 60
 
-
 startButton.addEventListener("click", function(e)) {
-    //possible clock solution from Brad
-    startButton.style.display = "none";
-  clock.textContent = seconds;
-  var clockMsg = setInterval(function () {
-    time--;
-    clock.textContent = time;
-    if (time === 0) {
-      clearInterval(clockMsg);
-    }
-  }, 1000);
-  7:24
-clock.textContent = time;
-    if (time === 0) {
-      clearInterval(clockMsg);(stops the clock at zero.
-
+    countDownTimer.display.seconds
 }
 
 //Time calculations in seconds
@@ -41,14 +26,25 @@ var question4 = {
 
 
 function startQuiz(){
+    //hide the .heading
     //unhide the timer
+    //start timer countdown
     //begin the takeQuiz function
 }
 
 function takeQuiz(){
     //prompt first question
-    //log results and prompt next question
-    //continue 
+    //log results and compare to correct answer
+    //if answer is correct add 25 points to score
+    //if else subtract 15 seconds from timer
+    //if timer reaches zero set scpre tp zero
+    //prompt next question 
+    //continue until all questions are answered
+    //at conclusion of test or timer, display score and prompt to enter initials
+    //store results locally
+    //return to start page
 }
+
+
 
 startQuiz(console.log("take the quiz"))

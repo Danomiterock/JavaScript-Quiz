@@ -33,3 +33,12 @@ button {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
+.timer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: adsolute;
+    height: 100px;
+    width: 100px;
+}
