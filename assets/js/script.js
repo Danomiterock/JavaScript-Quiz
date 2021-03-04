@@ -4,6 +4,14 @@ var heading = document.querySelector(".heading");
 var timer = document.querySelector(".timer-container");
 var clock = document.querySelector("#timer");
 var quiz = document.querySelector(".questions");
+//create variable for question text
+var qTitle = document.querySelector("#questionTitle")
+//create variable for each answer
+var btn0 = document.querySelector("#Answer0")
+var btn1 = document.querySelector("#Answer1")
+var btn2 = document.querySelector("#Answer2")
+var btn3 = document.querySelector("#Answer3")
+//create variable for hidden documents
 var hidden = document.querySelector(".hide")
 var questionIndex = 0;
 var seconds = 60;
@@ -54,6 +62,8 @@ function startQuiz() {
 }
 
 function takeQuiz() {
+qTitle.textContent = questions[0].Q
+
     hidden.style.display = "block";
   //display first question
   var currentQuestion = questions[questionIndex];
@@ -66,7 +76,7 @@ for (i = 0; i < questions.length; i++) {
 //move to the next question
 currentQuestion++;
 
-if (questions.length ===currentQuestion)
+if (questions.length ===currentQuestion){
   //log results and compare to correct answer
   //if answer is correct add 25 points to score
 //   if correctIndex = (true) {
