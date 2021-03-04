@@ -43,7 +43,7 @@ startButton.addEventListener("click", startQuiz);
 function startQuiz() {
   //hide the .heading
   heading.style.display = "none";
-  //unhide the timer
+  //unhide the timer and quiz
   timer.style.display = "block";
   quiz.style.display = "block";  
   //questions.style.display = "block;"
@@ -63,7 +63,7 @@ function takeQuiz() {
 for (i = 0; i < questions.length; i++) {
   text += questions[i] + "<br>";
 } 
-
+//move to the next question
 currentQuestion++;
 
 if (questions.length ===currentQuestion)
