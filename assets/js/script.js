@@ -15,22 +15,22 @@ var score = 0;
 //asign a value of 25 points per question
 var questions = [
   {
-    Q: "The sky is blue",
+    Q: "Java and JavaScript refer to the same coding language",
     A: ["true", "false"],
-    correctIndex: 0,
+    correctIndex: 1,
   },
   {
-    Q: "The sky is blue",
-    A: ["true", "false"],
-    correctIndex: 0,
+    Q: "A list of strings or objects in JavaScript is called a(n)...",
+    A: ["function", "variable", "array", "index"],
+    correctIndex: 2,
   },
   {
-    Q: "The sky is blue",
-    A: ["true", "false"],
-    correctIndex: 0,
+    Q: "A good way of describing the role of JavaScript in Web Development is to call JS the ________ of the website",
+    A: ["bones", "muscle", "mouth", "clothing"],
+    correctIndex: 1,
   },
   {
-    Q: "The sky is blue",
+    Q: "I am going to pass and graduate from this COding Bootcamp",
     A: ["true", "false"],
     correctIndex: 0,
   },
@@ -64,7 +64,7 @@ for (i = 0; i < questions.length; i++) {
 } 
   //log results and compare to correct answer
   //if answer is correct add 25 points to score
-  if correctIndex = true; {
+  if correctIndex = (true) {
       15++ 
   }
   //if else subtract 15 seconds from timer
