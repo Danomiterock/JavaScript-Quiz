@@ -34,13 +34,22 @@ button {
     transform: translate(-50%, -50%);
 }
 
-.timer {
+.timer-container {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
     position: adsolute;
     height: 100px;
     width: 100px;
+}
+
+#timer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 25px;
+    float: right;
+
 }
 
 .hide {

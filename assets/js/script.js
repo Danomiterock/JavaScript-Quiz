@@ -4,6 +4,7 @@ var heading = document.querySelector(".heading");
 var timer = document.querySelector(".timer-container");
 var clock = document.querySelector("#timer");
 var quiz = document.querySelector(".questions");
+var hidden = document.querySelector(".hide")
 var questionIndex = 0;
 var seconds = 60;
 var score = 0;
@@ -46,8 +47,9 @@ function startQuiz() {
   //unhide the timer
   timer.style.display = "block";
   quiz.style.display = "block";
+  hidden.style.display = "block";
   //start timer countdown
-  //startTimer();
+  startTimer();
   //begin the takeQuiz function
   takeQuiz();
 }
@@ -71,8 +73,8 @@ function startTimer() {
   var timeInterval = setInterval(function () {
     // As long as the `seconds` is greater than 1
     if (seconds > 1) {
-      // Set the `textContent` of `timerEl` to show the remaining seconds
-      timerEl.textContent = seconds + " seconds remaining";
+      // Set the `textContent` of `clock` to show the remaining seconds
+      clock.textContent = seconds + " seconds remaining";
       // Decrement `seconds` by 1
       seconds--;
     } else if (seconds === 1) {
