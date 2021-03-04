@@ -30,26 +30,26 @@ var score = 0;
 //store answers to multiple choice in an array and create coresponding values displayed as buttons
 //asign a value of 25 points per question
 var questions = [
-  //question index 0
+  //questionIndex 0
   {
     Q: "Java and JavaScript refer to the same coding language",
     A: ["true", "false"],
     correctIndex: 1,
   },
-  //question index 1
+  //questionIndex 1
   {
     Q: "A list of strings or objects in JavaScript is called a(n)...",
     A: ["function", "variable", "array", "index"],
     correctIndex: 2,
   },
-  //question index 2
+  //questionIndex 2
   {
     Q:
       "A good way of describing the role of JavaScript in Web Development is to call JS the ________ of the website",
     A: ["bones", "muscle", "mouth", "clothing"],
     correctIndex: 1,
   },
-  //question index 3
+  //questionIndex 3
   {
     Q: "I am going to pass and graduate from this COding Bootcamp",
     A: ["true", "false"],
