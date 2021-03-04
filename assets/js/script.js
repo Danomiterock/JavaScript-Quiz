@@ -8,7 +8,6 @@ var hidden = document.querySelector(".hide")
 var questionIndex = 0;
 var seconds = 60;
 var score = 0;
-
 //identify JavaScript questions and create two booleian and two multiple choice questions
 //create questions array where each item is an object
 //store answers to multiple choice in an array and create coresponding values displayed as buttons
@@ -46,8 +45,8 @@ function startQuiz() {
   heading.style.display = "none";
   //unhide the timer
   timer.style.display = "block";
-  quiz.style.display = "block";
-  hidden.style.display = "block";
+  quiz.style.display = "block";  
+  //questions.style.display = "block;"
   //start timer countdown
   startTimer();
   //begin the takeQuiz function
@@ -55,18 +54,24 @@ function startQuiz() {
 }
 
 function takeQuiz() {
+    hidden.style.display = "block";
   //display first question
   var currentQuestion = questions[questionIndex];
+  currentQuestion.style.display = "block";
   //create for loop
   var i;
 for (i = 0; i < questions.length; i++) {
   text += questions[i] + "<br>";
 } 
+
+currentQuestion++;
+
+if (questions.length ===currentQuestion)
   //log results and compare to correct answer
   //if answer is correct add 25 points to score
-  if correctIndex = (true) {
-      15++ 
-  }
+//   if correctIndex = (true) {
+//       15++ 
+//   }
   //if else subtract 15 seconds from timer
   //if timer reaches zero set sc0re tp zero
   //prompt next question
