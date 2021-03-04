@@ -64,6 +64,9 @@ for (i = 0; i < questions.length; i++) {
 } 
   //log results and compare to correct answer
   //if answer is correct add 25 points to score
+  if correctIndex = true; {
+      15++ 
+  }
   //if else subtract 15 seconds from timer
   //if timer reaches zero set sc0re tp zero
   //prompt next question
