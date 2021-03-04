@@ -44,9 +44,7 @@ button {
 }
 
 #timer {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    display: block;
     font-size: 25px;
     float: right;
 
