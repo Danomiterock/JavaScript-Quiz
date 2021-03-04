@@ -58,6 +58,10 @@ function takeQuiz() {
   //display first question
   var currentQuestion = questions[questionIndex];
   //create for loop
+  var i;
+for (i = 0; i < questions.length; i++) {
+  text += questions[i] + "<br>";
+} 
   //log results and compare to correct answer
   //if answer is correct add 25 points to score
   //if else subtract 15 seconds from timer
