@@ -11,6 +11,8 @@ var quiz = document.querySelector("#questions");
 //create variable for question text
 var qTitle = document.querySelector("#questionTitle");
 var qAnswers = document.querySelector("#answers");
+var highScore = 0;
+var leaderboard;
 // Reference to
 //create variable for hidden documents
 var hidden = document.querySelector(".hide");
@@ -18,8 +20,6 @@ var hidden = document.querySelector(".hide");
 var questionIndex = 0;
 //variable defining clock couontdown starting point
 var seconds = 60;
-//variable defining score starting point
-var score = 0;
 var timeInterval;
 //identify JavaScript questions and create two booleian and two multiple choice questions
 //create questions array where each item is an object
@@ -43,13 +43,13 @@ var questions = [
     Q:
       "A good way of describing the role of JavaScript in Web Development is to call JS the ________ of the website",
     A: ["bones", "muscle", "mouth", "clothing"],
-    correctAnswer: 1,
+    correctAnswer: "muscle",
   },
   //questionIndex 3
   {
     Q: "I am going to pass and graduate from this Coding Bootcamp",
     A: ["true", "false"],
-    correctAnswer: 0,
+    correctAnswer: "true",
   },
 ];
 //click begins startQuiz function declared below
@@ -82,6 +82,7 @@ function renderQuestion() {
     btn.textContent = answer;
     // append to the page
     qAnswers.append(btn);
+    // btn.style.justifyContent = "center";
   }
 }
 // Handle when a user clicks on a answer
@@ -94,9 +95,11 @@ qAnswers.addEventListener("click", function (e) {
   var val = e.target.textContent;
   // if the answer was correct
   if (currentQuestion.correctAnswer === val) {
+    seconds += 5;
   }
   // if answer was wrong
   else {
+    seconds -= 15;
   }
   questionIndex++;
   if (questionIndex === questions.length) {
@@ -129,8 +132,40 @@ function startTimer() {
 }
 function endGame() {
   // hide our quiz
-  // stop our timer
-  // Use `clearInterval()` to stop the timer
-  clearInterval(timeInterval);
+  var leaderboard = document.querySelector("#leaderboard");
+  highScore = seconds
+    // Use `clearInterval()` to stop the timer
+    clearInterval(timeInterval)
+    // console.log(highscore);
+  clock.innerHTML = ""
+  qTitle.innerHTML = "Leaderboard"
+  var userInput = document.createElement("input")
+  userInput.setAttribute("type", "text")
+  userInput.setAttribute("id", "userInput");
+  userInput.setAttribute("placeholder", "PLease insert your initials")
+  var userInitials = document.createElement("input");
+  userInitials.setAttribute("type", "button");
+  userInitials.setAttribute("id", "userInitials");
+  userInitials.value = "Submit"
+  leaderboard.classList.remove("hide");
+  leaderboard.classList.add("show");
+  // leaderboard.innerHTML = "Leaderboard";
+  qAnswers.innerHTML = "";
+  qAnswers.append(userInput )
+  qAnswers.append(userInitials)
   // display a form for our user
 }
+document.addEventListener("click", function(event){
+  if (event.target && event.target.id == "userInitials") {
+    var getInput = document.getElementById("userInput").value
+    var localStorageHighscore = JSON.parse(window.localStorage.getItem("highScore")) || []
+    localStorageHighscore.push({getInput, highScore})
+    console.log(localStorageHighscore);
+    window.localStorage.setItem("highScore", JSON.stringify(localStorageHighscore))  
+   console.log(localStorageHighscore.highScore); 
+  //  for ()
+    
+  }
+  }
+
+)
